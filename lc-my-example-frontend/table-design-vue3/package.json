@@ -1,0 +1,38 @@
+{
+  "name": "table-design-vue3",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "@element-plus/icons": "^0.0.11",
+    "@vue/shared": "^3.2.21",
+    "axios": "^0.23.0",
+    "core-js": "^3.6.5",
+    "dayjs": "^1.10.7",
+    "element-plus": "^1.2.0-beta.1",
+    "js-cookie": "^3.0.1",
+    "mitt": "^3.0.0",
+    "vue": "^3.0.0",
+    "vue-dock-menu": "^1.0.3",
+    "vue-router": "^4.0.0-0",
+    "vuex": "^4.0.0-0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss7-compat": "^2.2.17",
+    "@types/node": "^16.11.6",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "autoprefixer": "9",
+    "postcss": "7",
+    "postcss-import": "^14.0.2",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+  }
+}
