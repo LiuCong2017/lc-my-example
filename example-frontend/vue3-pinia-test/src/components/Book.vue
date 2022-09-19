@@ -2,7 +2,10 @@
   <div>
     book-name: {{bookName}} <br/>
     author: {{username}} <br/>
-    price: {{price}}
+    price: {{getAddPrice}}
+  </div>
+  <div>
+    <input type="button" @click="changePrice" value="Change"/>
   </div>
 </template>
 
@@ -12,9 +15,13 @@
   import {useUserStore} from "../store/user.js";
 
   const useBook = useBookStore()
-  const {bookName,price} = storeToRefs(useBook)
+  const {bookName,price,getAddPrice} = storeToRefs(useBook)
 
   const useUser = useUserStore();
   const {username} = storeToRefs(useUser)
+  const changePrice = ()=>{
+    return useBook.M_price();
+  }
+
 
 </script>
