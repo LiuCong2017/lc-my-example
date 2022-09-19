@@ -26,6 +26,11 @@
 
   let pName = ref('')
   const useUser = useUserStore()
+
+  if (useUser.getJobId !== 0){
+    console.log(useUser.getJobId)
+  }
+
   const name = computed(()=>{
     return useUser.username
   })

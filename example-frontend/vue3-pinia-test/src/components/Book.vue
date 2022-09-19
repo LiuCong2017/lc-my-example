@@ -23,5 +23,4 @@
     return useBook.M_price();
   }
 
-
 </script>
