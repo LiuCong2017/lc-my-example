@@ -1,4 +1,4 @@
-import {defineStore} from "pinia";
+import {defineStore, mapGetters} from "pinia";
 
 export const useBookStore = defineStore('book',{
     state: ()=>{
@@ -9,6 +9,7 @@ export const useBookStore = defineStore('book',{
     },
     getters: {
         getAddPrice: (state) => state.price+10,
+        getBookName: (state) => state.bookName,
     },
     actions:{
         M_price(){
