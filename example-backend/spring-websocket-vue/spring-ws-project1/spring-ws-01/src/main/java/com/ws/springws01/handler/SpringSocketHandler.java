@@ -59,4 +59,10 @@ public class SpringSocketHandler implements WebSocketHandler {
     public boolean supportsPartialMessages() {
         return false;
     }
+
+    public void sendMessage(){
+
+    }
+
+
 }

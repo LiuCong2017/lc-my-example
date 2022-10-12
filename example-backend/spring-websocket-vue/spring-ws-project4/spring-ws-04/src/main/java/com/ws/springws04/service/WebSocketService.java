@@ -92,8 +92,8 @@ public class WebSocketService {
     public void heartbeat(){
         //检查所有终端心跳次数
         for (String key:IDS.keySet()){
-            //心跳3次及以上的主动断开
-            if (IDS.get(key).intValue()>=3){
+            //心跳5次及以上的主动断开
+            if (IDS.get(key).intValue()>=5){
                 logger.info("心跳超时，关闭连接：" + key);
                 onClose(CLIENTS.get(key));
             }

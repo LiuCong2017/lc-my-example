@@ -12,7 +12,7 @@ const webSocketOnOpen = res=>{
 }
 //接收消息
 const webSocketOnMessage = res=>{
-  console.log("来自服务器的消息:"+res)
+  console.log("来自服务器的消息:"+res.data)
 }
 //连接错误
 const webSocketOnError = res=>{
@@ -33,7 +33,7 @@ const webSocketSend = ()=>{
 }
 
 onMounted(()=>{
-  webSocket = new WebSocket('ws://127.0.0.1:2022/ws/mis')
+  webSocket = new WebSocket('ws://127.0.0.1:20228/misas/misas-ws')
   webSocket.onopen = webSocketOnOpen;
   webSocket.onmessage = webSocketOnMessage;
   webSocket.onerror = webSocketOnError;
