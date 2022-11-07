@@ -13,11 +13,6 @@ import java.util.Optional;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
-/**
- * @version : [v1.0]
- * @description : []
- * 访问地址：http://localhost:xxxx/csm/doc.html
- */
 @Configuration
 @EnableSwagger2WebMvc
 public class Knife4jConfiguration {
@@ -30,16 +25,14 @@ public class Knife4jConfiguration {
         Docket docket=new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(new ApiInfoBuilder()
                         //描述字段支持Markdown语法
-                        .description("# misas RESTful APIs")
+                        .description("# RESTful APIs")
                         .version("1.0")
                         .build())
                 //分组名称
-                .groupName("MISAS资产管理系统")
+                .groupName("group")
                 .select()
                 //这里指定Controller扫描包路径
-                .apis(basePackage("com.misas.controller"+ SPLITOR +"com.misas.common.controller"+ SPLITOR + "com.misas.datav.controller"+ SPLITOR))
-//                .apis(RequestHandlerSelectors.basePackage("com.misas.controller"))
-//                .apis(RequestHandlerSelectors.basePackage("com.misas.common.controller"))
+                .apis(basePackage("com.lc.datasynch.controller"+ SPLITOR))
                 .paths(PathSelectors.any())
                 .build();
         return docket;
