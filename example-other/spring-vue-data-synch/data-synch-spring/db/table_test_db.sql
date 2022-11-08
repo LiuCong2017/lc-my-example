@@ -1,6 +1,6 @@
 use mysql;
 DROP database if EXISTS `table_test`;
-CREATE database `csm_test` default character set utf8 collate utf8_general_ci;
+CREATE database `table_test` default character set utf8 collate utf8_general_ci;
 use `table_test`;
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
@@ -16,7 +16,5 @@ CREATE TABLE `table`  (
                          `remark` longtext CHARACTER SET utf8 COLLATE utf8_general_ci NULL comment 'Remark',
                          PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 10 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
-
-# INSERT INTO `table` VALUES ('Jeromy',1970-12-03,8999.0,'je@je.com','');
 
 SET FOREIGN_KEY_CHECKS = 1;
