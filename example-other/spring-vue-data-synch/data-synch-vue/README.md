@@ -1,1 +1,1 @@
-#### data synch front-end part
+#### data sync front-end part
