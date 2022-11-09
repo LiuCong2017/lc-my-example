@@ -15,12 +15,12 @@ public class CodeGenerator {
 
     // 数据库连接配置
     private static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
-    private static final String JDBC_URL = "jdbc:mysql://192.168.2.200:3306/tb_design?useUnicode=true&useSSL=false&characterEncoding=utf8";
+    private static final String JDBC_URL = "jdbc:mysql://127.0.0.1:3306/tb?useUnicode=true&useSSL=false&characterEncoding=utf8";
     private static final String JDBC_USER_NAME = "root";
-    private static final String JDBC_PASSOWRD = "root2021";
+    private static final String JDBC_PASSOWRD = "root";
 
     // 包名和模块名
-    private static final String PACKAGE_NAME = "com.sld";
+    private static final String PACKAGE_NAME = "com.tb";
     private static final String MODULE_NAME = "";
 
     // 表名，多个表使用英文逗号分割
@@ -67,7 +67,7 @@ public class CodeGenerator {
     /** 1.全局配置 */
     private static GlobalConfig getGlobalConfig() {
         GlobalConfig gc = new GlobalConfig();
-        String projectPath = System.getProperty("com.pj");
+        String projectPath = System.getProperty("com.tb");
         gc.setOutputDir(projectPath + "/src/main/java");
         gc.setAuthor("lc");
         gc.setOpen(false);
@@ -105,7 +105,7 @@ public class CodeGenerator {
 
         // 自定义输出配置
         List<FileOutConfig> focList = new ArrayList<>();
-        String projectPath = System.getProperty("com.pj");
+        String projectPath = System.getProperty("com.tb");
         // 自定义配置会被优先输出
         focList.add(new FileOutConfig(templatePath) {
             @Override
