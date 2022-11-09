@@ -61,12 +61,12 @@
 > - [spring security 学习和踩坑总结（入门）](https://www.leafage.top/posts/detail/208291JMJ)
 > 
 > - Github:
-> - [](https://github.com/spring-projects/spring-security)
-> - [](https://github.com/eazybytes/spring-security)
-> - [](https://github.com/Baeldung/spring-security-registration)
-> - [](https://github.com/spring-projects/spring-security-samples)
-> - [](https://github.com/spring-projects/spring-security/blob/main/web/src/main/java/org/springframework/security/web/authentication/SavedRequestAwareAuthenticationSuccessHandler.java)
-> - [](https://github.com/bezkoder/spring-boot-spring-security-jwt-authentication)
+> - [1](https://github.com/spring-projects/spring-security)
+> - [2](https://github.com/eazybytes/spring-security)
+> - [3](https://github.com/Baeldung/spring-security-registration)
+> - [4](https://github.com/spring-projects/spring-security-samples)
+> - [5](https://github.com/spring-projects/spring-security/blob/main/web/src/main/java/org/springframework/security/web/authentication/SavedRequestAwareAuthenticationSuccessHandler.java)
+> - [6](https://github.com/bezkoder/spring-boot-spring-security-jwt-authentication)
 >
 > - 区别
 > - [授权 - JWT、OAuth、OAuth2、SpringSecurityOAuth2的区别](https://blog.csdn.net/weixin_40575457/article/details/109079970)
