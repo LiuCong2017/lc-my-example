@@ -1,6 +1,6 @@
 package com.lc.datasynch.api.dto;
 
-import com.lc.datasynch.domain.enums.OperationType;
+import com.lc.datasynch.api.enums.OperationType;
 import lombok.Data;
 
 @Data

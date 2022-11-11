@@ -1,4 +1,4 @@
-package com.lc.datasynch.domain.entity;
+package com.lc.datasynch.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
