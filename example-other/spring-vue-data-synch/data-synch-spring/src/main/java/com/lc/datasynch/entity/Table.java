@@ -1,19 +1,13 @@
 package com.lc.datasynch.entity;
 
-import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
-import java.time.LocalDate;
 import com.baomidou.mybatisplus.annotation.TableId;
-import java.io.Serializable;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
 
-/**
- * <p>
- * 
- * </p>
- *
- * @author Kavin
- * @since 2022-11-08
- */
+import java.io.Serializable;
+import java.time.LocalDate;
+
 @Data
 @TableName("table")
 public class Table implements Serializable {
@@ -33,8 +27,5 @@ public class Table implements Serializable {
 
     private String email;
 
-    /**
-     * Remark
-     */
     private String remark;
 }

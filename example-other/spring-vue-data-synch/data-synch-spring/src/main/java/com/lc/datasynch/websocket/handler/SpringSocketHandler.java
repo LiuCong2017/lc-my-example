@@ -2,7 +2,6 @@ package com.lc.datasynch.websocket.handler;
 
 import com.alibaba.fastjson2.JSON;
 import com.alibaba.fastjson2.JSONObject;
-import com.misas.service.SaMstrService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,7 +43,7 @@ public class SpringSocketHandler implements WebSocketHandler {
         IDS.put(session.getId(),new AtomicInteger(0));
         CLIENTS.put(session.getId(),session);
         //推送
-        session.sendMessage(new TextMessage(saMstrService.getExpr().toString()));
+        session.sendMessage(new TextMessage("Connection Successful"));
     }
 
     /**
@@ -57,10 +56,6 @@ public class SpringSocketHandler implements WebSocketHandler {
     public void handleMessage(WebSocketSession session, WebSocketMessage<?> message) throws Exception {
         String msg = "连接: "+session.getId() + ", 已收到消息:"+message.getPayload();
         JSONObject jsonObject = JSON.parseObject((String) message.getPayload());
-
-//        KeepAlive keepAlive = JSON.parseObject(message.getPayload().toString(),KeepAlive.class);
-//        System.out.println("JAVA对象-获取名称："+keepAlive.getMsg());
-
         System.out.println(msg);
         if ("心跳".equals(jsonObject.get("msg"))){
             //重置当前终端心跳次数
@@ -132,8 +127,7 @@ public class SpringSocketHandler implements WebSocketHandler {
        if (session.isOpen()) {
            return;
        }
-
-        try {
+       try {
             session.close();
         } catch (IOException e) {
             logger.error("关闭连接异常：" + e);

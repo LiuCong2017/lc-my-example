@@ -1,6 +1,6 @@
 package com.lc.datasynch.websocket.config;
 
-import com.misas.websocket.handler.SpringSocketHandler;
+import com.lc.datasynch.websocket.handler.SpringSocketHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.socket.config.annotation.EnableWebSocket;
@@ -14,12 +14,12 @@ public class SpringSocketConfig implements WebSocketConfigurer {
     private SpringSocketHandler socketHandler;
 
     /**
-     * 把自定义 Handle 注册到 "/misas-ws" 上面并设置了一下跨域，
+     * 把自定义 Handle 注册到 "/ws" 上面并设置了一下跨域，
      * 在整个配置类上还要打上@EnableWebSocket 注解，用于开启 WS 监听。
      * @param registry
      */
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-        registry.addHandler(socketHandler,"/misas-ws").setAllowedOrigins("*");
+        registry.addHandler(socketHandler,"/ws").setAllowedOrigins("*");
     }
 }
