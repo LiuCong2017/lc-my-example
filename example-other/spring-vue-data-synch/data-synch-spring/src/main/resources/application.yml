@@ -10,8 +10,8 @@ Spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/table_test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
-    username: xxxx
-    password: xxxx
+    username: root
+    password: root
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
       minimum-idle: 5
