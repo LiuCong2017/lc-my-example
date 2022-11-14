@@ -1,3 +1,3 @@
-#### springboot + MQ
+#### springboot + RabbitMQ
 
 > - (RocketMQ)[https://rocketmq.apache.org/]
