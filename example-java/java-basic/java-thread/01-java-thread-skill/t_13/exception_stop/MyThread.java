@@ -1,4 +1,4 @@
-package t13.exception_stop;
+package t_13.exception_stop;
 
 public class MyThread  extends Thread{
     @Override

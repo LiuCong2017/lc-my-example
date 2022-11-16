@@ -1,4 +1,4 @@
-package t14.suspend_resume;
+package t_14.suspend_resume;
 
 public class MyThread  extends Thread{
     private long i =0;

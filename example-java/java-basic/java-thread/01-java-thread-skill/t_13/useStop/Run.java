@@ -1,4 +1,4 @@
-package t13.exception_stop;
+package t_13.useStop;
 
 public class Run {
     public static void main(String[] args) {
@@ -6,7 +6,7 @@ public class Run {
             MyThread thread = new MyThread();
             thread.start();
             Thread.sleep(2000);
-            thread.interrupt();
+            thread.stop(); //deprecated so stop use it
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

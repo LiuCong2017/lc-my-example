@@ -1,4 +1,4 @@
-package t13.useReturnInterrupt;
+package t_13.useReturnInterrupt;
 
 public class Run {
     public static void main(String[] args) throws InterruptedException {

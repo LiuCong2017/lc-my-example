@@ -1,4 +1,4 @@
-package t13.useStop;
+package t_13.useStop;
 
 public class MyThread  extends Thread{
     private int i =0;

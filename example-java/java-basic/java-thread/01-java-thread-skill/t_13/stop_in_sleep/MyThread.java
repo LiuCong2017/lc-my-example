@@ -1,4 +1,4 @@
-package t13.stop_in_sleep;
+package t_13.stop_in_sleep;
 
 public class MyThread  extends Thread{
     @Override
