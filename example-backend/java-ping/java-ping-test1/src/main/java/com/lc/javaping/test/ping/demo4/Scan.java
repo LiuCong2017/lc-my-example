@@ -1,17 +1,3 @@
-/*
- *  Copyright (c) 2017 LiuCong2017.
- * 
- * 	file: Scan.java
- * 
- * 	ping / scan another host on your network
- * 
- * 	THIS SOFTWARE IS PROVIDED "AS IS" AND ANY AND ALL EXPRESS OR IMPLIED
- *  WARRANTIES ARE DISCLAIMED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
- *  WARRANTIES OF TITLE, MERCHANTABILITY, AGAINST INFRINGEMENT, AND FITNESS
- *  FOR A PARTICULAR PURPOSE.
- *  
- */
-
 package com.lc.javaping.test.ping.demo4;
 
 import java.io.IOException;
