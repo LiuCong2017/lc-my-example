@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <div id="content"></div>
+        <div id="inputBox">
+            <button id="open" onclick="openSocket()">打开连接</button>
+            <input id="msg" type="text" value="测试消息">
+            <button onclick="sendMsg()">发送消息</button>
+        </div>
+    </div>
+</body>
+<script>
+    let socket;
+    let open = true;
+
+    // function openSocket() {
+    //     if(typeof(WebSocket) == "undefined") {
+    //         console.log("您的浏览器不支持WebSocket");
+    //     }else{
+    //         console.log("您的浏览器支持WebSocket");
+    //         changeSocketStatus();
+    //     }
+    // }
+
+    // var ws = null;
+    // (()=>{
+    //     if ('WebSocket' in window) {
+    //         ws = new WebSocket("ws://127.0.0.1:2022/my-ws");
+    //     }else{
+    //         alert('Not Support WebSocket!')
+    //     }
+    // })()
+
+    function openSocket(){
+        let el = document.getElementById("open");
+        if (open){
+            el.textContent="关闭"
+            // const url = "ws://127.0.0.1:2022/my-ws";
+            const url = "ws://127.0.0.1:8080/api/websocket/10";
+            socket = new WebSocket(url);
+            socket.onopen = ()=>{
+                console.log("打开")
+            };
+            socket.onmessage = res=>{
+                const msg = res.data;
+                console.log("客户端收到消息:"+msg)
+            };
+            socket.onclose = ()=>{
+                console.log("关闭")
+            };
+            socket.onerror = ()=>{
+                console.log("错误")
+            };
+        }else {
+            el.textContent="打开";
+            socket.close();
+        }
+        open = !open;
+    }
+
+    function sendMsg(){
+        let msg = document.getElementById('msg').value;
+        msg = '{'+msg+'}';
+        if (socket!==undefined){
+            new Promise(resolve => {
+                socket.send(msg);
+                resolve();
+            }).then(()=>{
+                // console.log(msg)
+            }).catch(()=>{
+                console.log("错误")
+            })
+        }else {
+            console.log("错误")
+        }
+
+    }
+
+</script>
+</html>
