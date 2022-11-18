@@ -1,1 +1,0 @@
-A simple example for aop use learning
