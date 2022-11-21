@@ -16,6 +16,7 @@ class IThread extends Thread{
      * volatile关键字的目的是告诉虚拟机：
      * 1. 每次访问变量时，总是获取主内存的最新值；
      * 2. 每次修改变量后，立刻回写到主内存。
+     * 即当一个线程修改了某个共享变量的值，其他线程能够立刻看到修改后的值
      */
     public volatile boolean running = true;
     public void run(){
