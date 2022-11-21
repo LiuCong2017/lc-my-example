@@ -1,7 +1,6 @@
 package t_19;
 
 import java.util.Random;
-import java.util.random.RandomGenerator;
 
 public class MyThread1 extends Thread{
     @Override
