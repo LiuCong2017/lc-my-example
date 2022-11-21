@@ -10,7 +10,13 @@ public class ThreadInterrupt_03 {
 }
 
 class IThread extends Thread{
-    //线程间共享变量
+    /**
+     * 线程间共享变量
+     *
+     * volatile关键字的目的是告诉虚拟机：
+     * 1. 每次访问变量时，总是获取主内存的最新值；
+     * 2. 每次修改变量后，立刻回写到主内存。
+     */
     public volatile boolean running = true;
     public void run(){
        int n = 0 ;
