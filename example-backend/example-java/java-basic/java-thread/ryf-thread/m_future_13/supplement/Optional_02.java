@@ -3,7 +3,7 @@ package m_future_13.supplement;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.List;
@@ -55,6 +55,11 @@ class Student {
     private String name;
     private int age;
     private Integer score;
+
+    public Student(String name,int age){
+        this.name = name;
+        this.age = age;
+    }
 
     /**
      * 这是一个获取学生姓名的方法，方法入参为一个Student对象，为了防止student对象为null， 做了防御性检查：如果值为null，返回"Unkown"。

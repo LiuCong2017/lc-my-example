@@ -1,4 +1,4 @@
-package t2;
+package B_实例变量非线程安全_02;
 
 /**
  * "非线程安全"存在于"实例变量"中
@@ -7,6 +7,15 @@ package t2;
 public class HasSelfPrivateNum {
     //对象中的实例变量，非线程安全，多个线程通过非同步方法操作该变量可能出现覆盖
     private int num = 0;
+
+    public static void main(String[] args) {
+        HasSelfPrivateNum numRef = new HasSelfPrivateNum();
+        ThreadA threadA = new ThreadA(numRef);
+        threadA.start();
+
+        ThreadB threadB = new ThreadB(numRef);
+        threadB.start();
+    }
 
     //通过synchronized使其变成同步方法，则可保证以上变量是线程安全的
     synchronized public void addI(String u){
@@ -27,3 +36,32 @@ public class HasSelfPrivateNum {
     }
 
 }
+
+class ThreadA extends Thread{
+    private HasSelfPrivateNum numRef;
+    public ThreadA(HasSelfPrivateNum numRef){
+        super();
+        this.numRef = numRef;
+    }
+
+    @Override
+    public void run(){
+        super.run();
+        numRef.addI("a");
+    }
+}
+
+class ThreadB extends Thread{
+    private HasSelfPrivateNum numRef;
+    public ThreadB(HasSelfPrivateNum numRef){
+        super();
+        this.numRef = numRef;
+    }
+
+    @Override
+    public void run(){
+        super.run();
+        numRef.addI("b");
+    }
+}
+

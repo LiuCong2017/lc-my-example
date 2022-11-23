@@ -1,7 +1,5 @@
 package l_threadpool_12;
 
-import t1.Run;
-
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;

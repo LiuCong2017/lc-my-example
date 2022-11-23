@@ -1,7 +1,5 @@
 package t_18;
 
-import t_17.MyThread;
-
 public class MyThread1 extends Thread{
     @Override
     public void run(){
