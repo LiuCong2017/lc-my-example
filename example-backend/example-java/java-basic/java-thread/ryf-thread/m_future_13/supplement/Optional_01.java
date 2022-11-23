@@ -5,7 +5,7 @@ import java.util.Optional;
 /**
  * Optional包含有可选值的包装类，这意味着 Optional 类既可以含有对象也可以为空
  */
-public class OptionalDemo {
+public class Optional_01 {
     public static void main(String[] args) {
 //        Optional<Object> optional = Optional.empty();
 //        optional.get();

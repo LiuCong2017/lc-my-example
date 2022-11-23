@@ -1,15 +1,22 @@
-package m_future_13;
+package n_completefuture_14;
 
 import java.util.concurrent.CompletableFuture;
 
 /**
  * CompletableFuture
+ *
+ * CompletableFuture可以指定异步处理流程：
+ *
+ * thenAccept()处理正常结果；
+ * exceptional()处理异常结果；
+ * thenApplyAsync()用于串行化另一个CompletableFuture；
+ * anyOf()和allOf()用于并行化多个CompletableFuture
  */
-public class Future_05 {
+public class CompletableFuture_01 {
 
     public static void main(String[] args) throws InterruptedException {
         //创建异步执行任务
-        CompletableFuture<Double> cf = CompletableFuture.supplyAsync(Future_05::fetchPrice);
+        CompletableFuture<Double> cf = CompletableFuture.supplyAsync(CompletableFuture_01::fetchPrice);
         //如果执行成功:
         cf.thenAccept(result->{
             System.out.println("price: "+result);
