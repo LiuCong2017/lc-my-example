@@ -11,7 +11,7 @@ public class Future_04 {
         // 提交任务并获得Future:
         Future<String> future = executor.submit(task);
         // 从Future获取异步执行返回的结果:
-        String result = future.get(); //可能阻塞
+        String result = future.get(); //在调用get()时，如果异步任务已经完成，我们就直接获得结果。如果异步任务还没有完成，那么get()会阻塞，直到任务完成后才返回结果。
         System.out.println(result);
         executor.close();
     }
