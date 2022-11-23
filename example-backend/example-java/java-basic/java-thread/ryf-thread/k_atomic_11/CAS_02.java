@@ -14,12 +14,12 @@ public class CAS_02 {
                 throw new RuntimeException(e);
             }
             spinLockDemo.myUnLock();
-        },"t1").start();
+        }, "A_继承Thread类_01").start();
 
         new Thread(()->{
             spinLockDemo.myLock();
             spinLockDemo.myUnLock();
-        },"t2").start();
+        }, "B_实现Runnable接口_03").start();
 
     }
 }

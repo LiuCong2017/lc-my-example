@@ -1,6 +1,30 @@
-package t4_threadsafe;
+package C_实例变量与线程安全_04;
 
-public class LoginServlet {
+public class ThreadSafe {
+    public static void main(String[] args) {
+        ALogin a = new ALogin();
+        a.start();
+        BLogin b = new BLogin();
+        b.start();
+    }
+}
+
+class ALogin extends Thread{
+    @Override
+    public void run(){
+        LoginServlet.doPost("a","aa");
+    }
+
+}
+
+class BLogin extends Thread{
+    @Override
+    public void run(){
+        LoginServlet.doPost("b","bb");
+    }
+}
+
+class LoginServlet {
     private static String usernameRef;
     private static String passwordRef;
 

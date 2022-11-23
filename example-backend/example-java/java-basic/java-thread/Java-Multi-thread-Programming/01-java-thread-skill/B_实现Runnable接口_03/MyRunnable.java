@@ -1,4 +1,12 @@
-package t2;
+package B_实现Runnable接口_03;
+
+class Test2 {
+    public static void main(String[] args) {
+        Thread thread = new Thread(new MyRunnable());
+        thread.start();
+        System.out.println("running done!");
+    }
+}
 
 public class MyRunnable implements Runnable{
 

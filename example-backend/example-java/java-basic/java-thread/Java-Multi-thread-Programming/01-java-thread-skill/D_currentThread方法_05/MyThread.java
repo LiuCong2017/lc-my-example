@@ -1,4 +1,11 @@
-package t6;
+package D_currentThread方法_05;
+
+class Run {
+    public static void main(String[] args) {
+        MyThread myThread = new MyThread();
+        myThread.start();
+    }
+}
 
 public class MyThread extends Thread{
     public MyThread(){
