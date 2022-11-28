@@ -1,4 +1,4 @@
-package lc.ws_mq;
+package lc.z_other.ws_mq;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.*;

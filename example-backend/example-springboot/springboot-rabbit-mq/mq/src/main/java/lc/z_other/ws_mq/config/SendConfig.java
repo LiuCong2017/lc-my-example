@@ -1,4 +1,4 @@
-package lc.ws_mq.config;
+package lc.z_other.ws_mq.config;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;

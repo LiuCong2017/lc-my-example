@@ -1,9 +1,12 @@
-package lc.ws_mq.controller;
+package lc.z_other.ws_mq.controller;
 
+import lc.z_other.ws_mq.MyWebSocketHandler;
 import org.springframework.amqp.core.AmqpTemplate;
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.socket.TextMessage;
 
 @RestController
 public class Controller {
