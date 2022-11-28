@@ -1,4 +1,4 @@
-package lc.example1.demo1;
+package lc.example_default.demo1;
 
 import com.rabbitmq.client.Channel;
 import org.springframework.amqp.core.Message;

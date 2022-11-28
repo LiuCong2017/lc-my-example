@@ -1,4 +1,4 @@
-package lc.example2_fanout.config;
+package lc.example_fanout.config;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;

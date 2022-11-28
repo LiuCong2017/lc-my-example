@@ -1,0 +1,69 @@
+1. 安装配置: 	
+	set ERLANG_HOME=D:\Program Files\erl8.3
+	设置RABBITMQ_SERVER环境变量并添加到path [%RABBITMQ_SERVER%\sbin]
+
+	rabbitmq-plugins.bat enable rabbitmq_management
+
+	账号密码:
+	guest
+	guest
+
+	rabbitmqctl.bat add_user lc lc_pwd
+	rabbitmqctl.bat set_user_tags lc administrator
+	rabbitmqctl.bat set_permissions -p / lc "." "." ".*"
+	rabbitmqctl delete_user guest
+	rabbitmqctl.bat list_users
+	rabbitmqctl.bat list_vhosts
+
+	supplement：
+	输入 rabbitmqctl add_vhost VHOST 创建一个叫 VHOST 的虚拟用户目录
+	rabbitmqctl set_permissions -p VHOST myRoot ".*" ".*" ".*" 为用户设置权限
+
+	net stop RabbitMQ
+	net start RabbitMQ
+
+	access:
+		http://localhost:15672/
+
+2. References:
+	https://www.rabbitmq.com/install-windows.html
+	https://www.rabbitmq.com/relocate.html
+	https://www.rabbitmq.com/logging.html
+	https://www.rabbitmq.com/logging.html#log-file-location
+	https://www.rabbitmq.com/configure.html
+
+	https://zhuanlan.zhihu.com/p/450347718
+	https://zhuanlan.zhihu.com/p/426731884
+
+3. 本机安装位置：
+	C:\Program Files\RabbitMQ Server\rabbitmq_server-3.10.6
+	日志：
+	C:\Users\kavin\AppData\Roaming\RabbitMQ\log
+
+4. 解决rabbitmq服务启动后自动停止(中文路径问题):
+	首先进入到rabbitmq的sbin目录：打开cmd命令行
+	1、执行rabbitmq-service.bat remove
+	2、执行set RABBITMQ_BASE=E:\rabbitmq_server （随便自定义一个路径没有中文的目录）
+	3、执行rabbitmq-service.bat install
+	4、执行启动的命令rabbitmq-plugins enable rabbitmq_management
+	5、打开服务界面检查下RabbitMQ服务，保证是启动状态；
+	接着打开http://localhost:15672/就能正常访问了
+
+5. 开启MQTT:
+	第一种 rabbitmq_mqtt 提供与后端服务交互使用，对应端口1883。
+	rabbitmq-plugins enable rabbitmq_mqtt
+
+	第二种 rabbitmq_web_mqtt 提供与前端交互使用，对应端口15675。
+	rabbitmq-plugins enable rabbitmq_web_mqtt
+
+5.1 开启STOMP（在RabbitMQ上启动rabbitmq_web_stomp插件）:
+	rabbitmq-plugins enable rabbitmq_stomp
+	rabbitmq-plugins enable rabbitmq_web_stomp_examples
+	rabbitmq-plugins enable rabbitmq_web_stomp
+
+6. 查看消息队列现在的情况：
+	rabbitmqctl.bat list_queues
+    查看绑定关系：
+	rabbitmqctl list_bindings
+
+

@@ -1,4 +1,4 @@
-package lc.example2_fanout.demo;
+package lc.example_fanout.demo;
 
 import com.rabbitmq.client.Channel;
 import org.slf4j.Logger;

@@ -1,7 +1,7 @@
-package lc.example1.demo2;
+package lc.example_default.demo2;
 
 import com.rabbitmq.client.Channel;
-import lc.example1.entity.TestEntityNoSerialzable;
+import lc.example_default.entity.TestEntityNoSerialzable;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.support.AmqpHeaders;

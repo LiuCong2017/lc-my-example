@@ -1,6 +1,6 @@
 package lc.example_direct.demo;
 
-import lc.example_direct.entity.Client;
+import lc.example_fanout.entity.Client;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;

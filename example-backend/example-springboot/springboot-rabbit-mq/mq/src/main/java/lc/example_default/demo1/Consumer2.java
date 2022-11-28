@@ -1,7 +1,7 @@
-package lc.example1.demo1;
+package lc.example_default.demo1;
 
 import com.rabbitmq.client.Channel;
-import lc.example1.entity.TestEntiry;
+import lc.example_default.entity.TestEntiry;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;

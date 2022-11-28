@@ -1,4 +1,4 @@
-package lc.example1.config;
+package lc.example_default.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.amqp.core.Queue;

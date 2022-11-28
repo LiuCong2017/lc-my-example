@@ -1,4 +1,4 @@
-package lc.example1.entity;
+package lc.example_default.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

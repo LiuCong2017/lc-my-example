@@ -1,6 +1,6 @@
-package lc.example1.demo1;
+package lc.example_default.demo1;
 
-import lc.example1.entity.TestEntiry;
+import lc.example_default.entity.TestEntiry;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.core.MessageProperties;
 import org.springframework.amqp.core.MessagePropertiesBuilder;

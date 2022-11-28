@@ -1,6 +1,6 @@
-package lc.example1.demo2;
+package lc.example_default.demo2;
 
-import lc.example1.entity.TestEntityNoSerialzable;
+import lc.example_default.entity.TestEntityNoSerialzable;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

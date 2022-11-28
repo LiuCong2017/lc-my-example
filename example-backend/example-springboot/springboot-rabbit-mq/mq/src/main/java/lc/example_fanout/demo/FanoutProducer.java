@@ -1,6 +1,6 @@
-package lc.example2_fanout.demo;
+package lc.example_fanout.demo;
 
-import lc.example2_fanout.entity.Client;
+import lc.example_fanout.entity.Client;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;

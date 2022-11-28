@@ -1,8 +1,8 @@
 package lc;
 
-import lc.example1.demo1.Producer;
-import lc.example1.demo2.Producer3;
-import lc.example2_fanout.demo.FanoutProducer;
+import lc.example_default.demo1.Producer;
+import lc.example_default.demo2.Producer3;
+import lc.example_fanout.demo.FanoutProducer;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

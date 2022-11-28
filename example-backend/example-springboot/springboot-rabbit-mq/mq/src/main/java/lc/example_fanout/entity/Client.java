@@ -1,4 +1,4 @@
-package lc.example2_fanout.entity;
+package lc.example_fanout.entity;
 
 import lombok.Data;
 
