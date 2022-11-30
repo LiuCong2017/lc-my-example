@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      body{
+        font-family: Arial,sans-serif;
+      }
+      header{
+        display: flex;
+        flex-direction: row;
+      }
+      header .profile-thumbnail{
+        width: 50px;
+        height: 50px;
+        border-radius: 4px;
+      }
+      header .profile-name{
+        margin-left: 10px;
+        display: flex;
+      }
+      header .follow-btn{
+        margin: 0 0 0 auto;
+        display: flex;
+      }
+      header .follow-btn button{
+        border: 0;
+        border-radius: 3px;
+        padding: 5px;
+      }
+      header h3, header h4{
+        margin: 0;
+        display: flex;
+      }
+      #inner p{
+        margin-bottom: 10px;
+        font-size: 20px;
+      }
+      #inner hr{
+        margin: 20px 0;
+        border-style: solid;
+        opacity: 0.1;
+      }
+      footer{
+        display: flex;
+        flex-direction: row;
+      }
+      footer .stats{
+        font-size: 15px;
+        display: flex;
+      }
+      footer .stats strong{
+        font-size: 18px;
+      }
+      footer .stats .likes{
+        margin-left: 10px;
+      }
+      footer .cta {
+        margin-left: auto;
+      }
+      footer .cta button {
+        border: 0;
+        background: transparent;
+      }
+    </style>
+</head>
+<body>
+  <header>
+    <img src="https://atts.w3cschool.cn/rabbit600x600.png" alt="Rabbit Loen profile picture" class="profile-thumbnail">
+    <div class="profile-name">
+      <h3>Kavin</h3>
+      <h4>@LC</h4>
+    </div>
+    <div class="follow-btn">
+      <button>关注</button>
+    </div>
+  </header>
+
+  <div id="inner">
+    <p>fawe ewfap pfew efafjo ufoeawjl;j of ffawojefoa oifuaw </p>
+    <span class="date">2022年12月30日 20:57</span>
+    <hr>
+  </div>
+  </div>
+
+  <footer>
+    <div class="stats">
+      <div class="Retweets">
+        <strong>107</strong> 评论
+      </div>
+      <div class="likes">
+        <strong>431</strong> 点赞
+      </div>
+    </div>
+
+    <div class="cta">
+      <button class="share-btn">分享</button>
+      <button class="retweet-btn">评论</button>
+      <button class="like-btn">点赞</button>
+    </div>
+  </footer>
+
+</body>
+</html>
