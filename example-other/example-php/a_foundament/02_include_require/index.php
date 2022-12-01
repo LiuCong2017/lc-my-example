@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<?php include 'header.php'; ?>
+<?php include 'header.inc'; ?>
 <body>
 
     <div class="leftmenu">

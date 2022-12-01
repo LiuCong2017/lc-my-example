@@ -1,0 +1,2 @@
+-- create user_t{}
+-- create view user_v{}

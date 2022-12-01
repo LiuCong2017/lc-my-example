@@ -1,4 +1,25 @@
 <?php
+
+//
+// +---------------------------------------------------------+
+// | PHP version 7.4                                         |
+// +---------------------------------------------------------+
+// | Copyright (c) 1997-2022 Kavin               |
+// +---------------------------------------------------------+
+// | This source file is subject to  of the PHP license,     |
+// | that is bundled with this packafile LICENSE, and is     |
+// | available at through the world-web at                   |
+// | http://www.php.net/license/2_02.txt.                    |
+// | If you did not receive a copy of the  and are unable to |
+// | obtain it through the world-wide-web,end a note to      |
+// | license@php.net so we can mail you a immediately.       |
+// +---------------------------------------------------------+
+// | Authors: Kavin <xxx@xxx.xx>               |
+// |                                                         |
+// +---------------------------------------------------------+
+//
+// $Id: core.php,v 1.0 2022/11/13 01:26:48 ssb Exp $
+
 declare(encoding='UTF-8');
 namespace demo3;
 ?>
@@ -23,17 +44,18 @@ $name = $_REQUEST['fname'];
 $name = $_POST['fname'];
 $name = $_GET['name'];
 
-$x = 5;
-$z = 9;
+$gBASE_DIR = "/";
+$gX = 5;
+$gZ = 9;
 
 function te($n){
-//    global $x;
+    global $gX;
     $y=10;
 //    echo "$x";
 
-    $GLOBALS['z']=$GLOBALS['x']+$y;
+    $GLOBALS['gZ'] = $GLOBALS['gZ']+$y;
 
-    static $m=10;
+    static $s_m=10;
     $m = $n;
     $m = variable;
 
@@ -42,7 +64,8 @@ function te($n){
 
 te(23);
 
-echo "$x";
+$x1 =1;
+echo "$x1";
 echo "<h2>Test</h2>";
 print "ewf";
 print_r("fewfwewf");
@@ -96,14 +119,43 @@ $families = array
 );
 echo "Is " . $families['Griffin'][2] . " a part of the Griffin family?";
 
-
+/**
+* @ Purpose:
+* 访问数据库的类，以ODBC作为通用访问接口
+* @Package Name: Database
+* @Author: Kavin xxx@xx.cn
+* @Modifications:
+* No20020523-100:
+* odbc_fetch_into()参数位置第二和第三个位置调换
+* John Johnson John@crtvu.edu.cn
+* @See: (参照)
+*/
 class CarObj
 {
+    /**
+     * @Purpose:
+     * 数据库连接用户名
+     * @Attribute/Variable Name: db_user_name
+     * @Type: string
+     */
     var $color;
+
     function CarObj($color){
-        $this->color=$color;
+        $this->color = $color;
     }
 
+    /**
+    * @Purpose:
+    * 执行一次查询
+    * @Method Name: Query()
+    *
+    * @Param: string $queryStr SQL查询字符串
+    * @Param: string $username 用户名
+    *
+    * @Author: Kavin
+    *
+    * @Return: mixed 查询返回值（结果集对象）
+    */
     function getColor(){
         return $this->color;
     }
@@ -211,6 +263,11 @@ echo date("l") . "<br>";
 // Prints the day, date, month, year, time, AM or PM
 echo date("l jS of F Y h:i:s A");
 
+$foo = 300;
+define("PAY_CHECK","200");
+if (PAY_CHECK<$foo){
+
+}
 
 ?>
 </body>
