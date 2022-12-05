@@ -1,9 +1,12 @@
 package com.example.demo.config;
 
 import com.example.demo.entiry.ErrorEntity;
+import com.example.demo.filter.AutoAuthenticationFilter;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -24,8 +27,14 @@ import java.io.PrintWriter;
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-//    @Resource
-//    private AutoAuthenticationFilter authFilter;
+    @Resource
+    private AutoAuthenticationFilter authFilter;
+
+    @Override
+    @Bean
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
+    }
 
     //自定义配置
     @SuppressWarnings("deprecation")
@@ -42,7 +51,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         // 将自定义的过滤器添加到UsernamePasswordAuthenticationFilter过滤器的前面
-//        httpSecurity.addFilterBefore(authFilter, UsernamePasswordAuthenticationFilter.class) ;
+//        httpSecurity.addFilterBefore(authFilter, UsernamePasswordAuthenticationFilter.class);
 
         // 关闭csrf，就是删除CsrfFilter过滤器。
         httpSecurity.csrf().disable();
