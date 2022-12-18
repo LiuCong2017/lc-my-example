@@ -7,6 +7,8 @@
 >
 > https://github.com/danvega/jwt-auth-demo
 > 
+> https://github.com/danvega/jwt
+> 
 > https://github.com/danvega/jwt-username-password
 > 
 > https://github.com/danvega/whats-new-spring-boot-3
